@@ -1,0 +1,2 @@
+# Backend
+This directory will contain the Node.js + Express API server that bridges the web frontend with the C++17 DSA engine (Phase 6).

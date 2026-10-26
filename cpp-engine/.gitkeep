@@ -1,0 +1,2 @@
+# C++ DSA Engine
+This directory will contain the C++17 implementation of graph structures, BFS, DFS, Dijkstra's algorithm, and greedy route optimization (Phases 1-4).

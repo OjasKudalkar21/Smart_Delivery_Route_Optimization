@@ -1,0 +1,28 @@
+{
+  "name": "Metro Delivery Zone Sample Graph",
+  "description": "Standard DSA testing and demo graph with 1 central warehouse and 7 delivery stops",
+  "warehouse": "Warehouse",
+  "vertices": [
+    { "id": "Warehouse", "name": "Central Warehouse Depot", "lat": 37.7749, "lon": -122.4194 },
+    { "id": "Downtown", "name": "Downtown Plaza", "lat": 37.7833, "lon": -122.4167 },
+    { "id": "North_Station", "name": "North Train Station", "lat": 37.7950, "lon": -122.4050 },
+    { "id": "West_Mall", "name": "West Shopping Mall", "lat": 37.7650, "lon": -122.4400 },
+    { "id": "Tech_Park", "name": "Silicon Tech Park", "lat": 37.7500, "lon": -122.3900 },
+    { "id": "Harbor", "name": "Maritime Cargo Harbor", "lat": 37.8050, "lon": -122.4100 },
+    { "id": "Suburbs", "name": "Greenfield Suburbs", "lat": 37.7300, "lon": -122.4300 },
+    { "id": "Airport", "name": "International Airport", "lat": 37.7120, "lon": -122.3850 }
+  ],
+  "edges": [
+    { "from": "Warehouse", "to": "Downtown", "distance": 3.2, "road": "Main Avenue" },
+    { "from": "Warehouse", "to": "West_Mall", "distance": 4.5, "road": "West Expressway" },
+    { "from": "Warehouse", "to": "Tech_Park", "distance": 5.1, "road": "Southern Boulevard" },
+    { "from": "Downtown", "to": "North_Station", "distance": 2.4, "road": "North Transit Way" },
+    { "from": "Downtown", "to": "Harbor", "distance": 3.8, "road": "Pier Corridor" },
+    { "from": "Downtown", "to": "Tech_Park", "distance": 4.8, "road": "Central Connector" },
+    { "from": "North_Station", "to": "Harbor", "distance": 1.9, "road": "Bayside Parkway" },
+    { "from": "West_Mall", "to": "Suburbs", "distance": 4.0, "road": "Valley Arterial" },
+    { "from": "Tech_Park", "to": "Suburbs", "distance": 3.5, "road": "Industrial Link" },
+    { "from": "Tech_Park", "to": "Airport", "distance": 6.2, "road": "Airport Freeway" },
+    { "from": "Suburbs", "to": "Airport", "distance": 5.8, "road": "Outer Ring Road" }
+  ]
+}
