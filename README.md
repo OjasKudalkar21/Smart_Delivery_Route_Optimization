@@ -102,11 +102,14 @@ Development strictly follows the phased approach defined in [`Smart_Delivery_Rou
 | **Phase 2** | Dijkstra's Shortest Path Algorithm & Path Reconstruction | **Completed** |
 | **Phase 3** | Greedy Route Optimization Heuristic & Baseline Order Comparison | **Completed** |
 | **Phase 4** | Machine-readable C++ JSON Interface & Build Automation | **Completed** |
-| **Phase 5** | Frontend Shell (React, TypeScript, Tailwind CSS, Lucide icons) | *Next Up* |
-| **Phase 6** | Express API Server & C++ Process Integration | Pending |
-| **Phase 7** | Interactive Leaflet Map Visualization & Stop Sequencing | Pending |
+| **Phase 5** | Frontend Shell (React 19, TypeScript, Tailwind CSS, Lucide icons) | **Completed** |
+| **Phase 6** | Express API Server & C++ Process Integration | **Completed** |
+| **Phase 7** | Interactive Leaflet Map Visualization & Stop Sequencing | **Completed** |
 | **Phase 8** | Optional Real Road Routing Integration (OSRM / Distance Matrix) | Optional |
-| **Phase 9** | Final End-to-End Testing, Documentation, & Viva Demo Script | Pending |
+| **Phase 9** | Final End-to-End Testing, Documentation, & Viva Demo Script | **Completed** |
+
+
+
 
 ---
 
@@ -193,14 +196,60 @@ g++ -std=c++17 -Wall -Wextra -Wl,--nxcompat,--dynamicbase -I cpp-engine/include 
 .\tests\test_engine_interface.exe
 ```
 
-### Run All Test Suites (Phases 1 - 4)
+### Run All C++ Test Suites (Phases 1 - 4)
 ```powershell
 .\tests\run_all_tests.bat
 ```
 
+### Run Phase 6 Backend API Integration Tests
+```powershell
+.\tests\run_phase6_tests.bat
+```
+
+### Run Master Full-Stack Test Suite (Phases 1 - 9)
+To run every automated test across all tiers (C++ engine, Express API, and React TypeScript build):
+```powershell
+.\tests\run_all_project_tests.bat
+```
+
 ---
 
-## 8. Algorithmic Complexity Reference
+## 7. Running the Full Stack Application
+
+### Quick One-Click Startup (Recommended)
+Double-click [`start_all.bat`](start_all.bat) or run from PowerShell:
+```powershell
+.\start_all.bat
+```
+This automatically compiles the C++ engine if needed, starts the Express backend on port `5000`, starts the Vite frontend on port `5173`, and opens `http://localhost:5173` in your default browser.
+
+### Manual Multi-Terminal Startup
+1. **Terminal 1 - Express Backend API (Port 5000):**
+   ```powershell
+   cd backend
+   npm start
+   ```
+
+2. **Terminal 2 - Vite React Frontend (Port 5173):**
+   ```powershell
+   cd frontend
+   npm run dev
+   ```
+
+Open `http://localhost:5173` in your browser. The status badge will show `C++17 Engine (Live)` and all routing requests are solved directly by the native C++ executable!
+
+---
+
+## 8. Viva Presentation & Demonstration Guide
+For examiners and project viva evaluation, refer to [`DEMO_SCRIPT.md`](DEMO_SCRIPT.md) for:
+- 5-minute live demonstration script.
+- Anticipated viva questions and answers (Adjacency list trade-offs, Dijkstra heap mechanics, negative weight failures, greedy TSP heuristic proof).
+- Complete algorithmic time and space complexity explanations.
+
+---
+
+## 9. Algorithmic Complexity Reference
+
 
 | Algorithm | Data Structure | Time Complexity | Space Complexity |
 | :--- | :--- | :---: | :---: |

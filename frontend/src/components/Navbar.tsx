@@ -82,17 +82,26 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, isMockM
           </nav>
 
           {/* Engine Status Badge */}
-          <div className="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs">
+          <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              <span
+                className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${
+                  isMockMode ? 'bg-amber-400' : 'bg-emerald-400'
+                }`}
+              ></span>
+              <span
+                className={`relative inline-flex rounded-full h-2 w-2 ${
+                  isMockMode ? 'bg-amber-500' : 'bg-emerald-500'
+                }`}
+              ></span>
             </span>
             <span className="text-slate-300 font-medium">Engine:</span>
-            <span className="text-emerald-400 font-mono">
-              {isMockMode ? 'Phase 5 Mock Shell' : 'C++17 Engine Active'}
+            <span className={`font-mono ${isMockMode ? 'text-amber-400' : 'text-emerald-400'}`}>
+              {isMockMode ? 'Phase 5 Mock Shell' : 'C++17 Engine (Live)'}
             </span>
             <ShieldCheck className="w-3.5 h-3.5 text-indigo-400 ml-1" />
           </div>
+
         </div>
       </div>
     </header>

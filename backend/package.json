@@ -1,0 +1,25 @@
+{
+  "name": "routepilot-backend",
+  "version": "1.0.0",
+  "description": "Express API server bridging RoutePilot React frontend to C++17 DSA routing engine",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node tests/api.test.js"
+  },
+  "keywords": [
+    "delivery",
+    "route-optimization",
+    "dsa",
+    "express",
+    "cpp17"
+  ],
+  "author": "RoutePilot Team",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
