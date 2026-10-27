@@ -1,3 +1,13 @@
+:root {
+  --accent: #f26522;
+  --accent-bg: rgba(242, 101, 34, 0.08);
+  --accent-border: rgba(242, 101, 34, 0.4);
+  --border: #e2e8f0;
+  --text-h: #0f172a;
+  --social-bg: #f8fafc;
+  --shadow: 0 4px 14px 0 rgba(242, 101, 34, 0.15);
+}
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;
@@ -87,6 +97,7 @@
     margin-bottom: 16px;
     width: 22px;
     height: 22px;
+    color: var(--accent);
   }
 
   @media (max-width: 1024px) {
@@ -125,10 +136,13 @@
     align-items: center;
     gap: 8px;
     text-decoration: none;
-    transition: box-shadow 0.3s;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
 
     &:hover {
       box-shadow: var(--shadow);
+      border-color: var(--accent-border);
+      color: var(--accent);
     }
     .button-icon {
       height: 18px;
@@ -175,10 +189,10 @@
 
   &::before {
     left: 0;
-    border-left-color: var(--border);
+    border-left-color: var(--accent);
   }
   &::after {
     right: 0;
-    border-right-color: var(--border);
+    border-right-color: var(--accent);
   }
 }

@@ -4,45 +4,54 @@
 
 @layer base {
   body {
-    @apply bg-slate-950 text-slate-100 font-sans antialiased;
+    @apply bg-slate-100 text-slate-800 font-sans antialiased;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 }
 
-/* Glassmorphism helpers */
+/* Light Glassmorphism Panel Helpers */
 .glass-panel {
-  background: rgba(15, 23, 42, 0.75);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(229, 231, 235, 0.8);
 }
 
 .glass-panel-hover:hover {
-  border-color: rgba(99, 102, 241, 0.3);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  border-color: rgba(242, 101, 34, 0.4);
+  box-shadow: 0 12px 30px -10px rgba(15, 23, 42, 0.08);
 }
 
-/* Custom scrollbar */
+/* Custom Light Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0b1120;
+  background: #f3f4f6;
 }
 ::-webkit-scrollbar-thumb {
-  background: #23314d;
+  background: #d1d5db;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #374769;
+  background: #f26522;
 }
 
-/* Leaflet Dark Mode Tiles */
+/* Leaflet Light Mode Container & Tiles */
 .leaflet-container {
-  background-color: #0b1120 !important;
+  background-color: #e5e7eb !important;
   font-family: inherit !important;
 }
 
 .leaflet-tile {
-  filter: brightness(0.75) invert(0.92) contrast(1.2) hue-rotate(185deg) saturate(0.4) !important;
+  filter: none !important;
+}
+
+.map-fullscreen-viewport:fullscreen {
+  width: 100vw;
+  height: 100vh;
+  max-width: none;
+  border: 0;
+  border-radius: 0;
+  background: #e5e7eb;
 }
